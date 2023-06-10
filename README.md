@@ -11,7 +11,9 @@
 
 # Autodistill Base Model Template
 
-This repository contains a templtae for use in creating a Base Model for [Autodistill](https://github.com/autodistill/autodistill).
+**Note: Before you start building a Base Model, check out our  
+
+This repository contains a template for use in creating a Base Model for [Autodistill](https://github.com/autodistill/autodistill).
 
 A Base Model is a large model that you can use for automatically labeling data. Autodistill enables you to connect Base Models to a smaller Target Model. A new model is trained using the Target Model architecture and your labeled data. This model will be smaller and thus more cost effective to run.
 
@@ -38,6 +40,14 @@ Next, implement the following functions:
 
 1. `__init__`: Code for loading the model.
 2. `predict`: A function that takes in an image name, runs inference, and returns a `supervision` Detections object (object detection) or a `supervision` Classifications object (classification).
+
+Replace the import statement in the `__init__.py` file in your model directory to point to your model. You only need to import the model, such as:
+
+```
+from autodistill_clip.clip_model import CLIP
+```
+
+Your version should be set in the `__init__.py` file as `0.1.0` before submitting your model for review.
 
 Update the `setup.py` file to use the name of your model where appropriate. Add all of the requisite dependencies to the `install_requires` section.
 
