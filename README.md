@@ -11,7 +11,7 @@
 
 # Autodistill Base Model Template
 
-**Note: Before you start building a Base Model, check out our  
+**⚠️ Note: Before you start building a Base Model, check out our [Available Models](https://docs.autodistill.com/#available-models) directory to see if a model is already being implemented. If your desired model is being implemented, check the [Autodistill](https://github.com/autodistill/autodistill) GitHub Issues for progress. We encourage you to offer support to models you want to see in Autodistill if work is already being done on them.**
 
 This repository contains a template for use in creating a Base Model for [Autodistill](https://github.com/autodistill/autodistill).
 
@@ -50,6 +50,12 @@ from autodistill_clip.clip_model import CLIP
 Your version should be set in the `__init__.py` file as `0.1.0` before submitting your model for review.
 
 Update the `setup.py` file to use the name of your model where appropriate. Add all of the requisite dependencies to the `install_requires` section.
+
+Your Base Model should feature a README that shows a minimal example of how to use the base model. This should only be a few lines of code. Refer to `README_EXAMPLE.md` for an example of an Autodistill Base Model README. Feel free to copy this example and replace all parts as required.
+
+Your package must be licensed under the same license as the model you are using (i.e. if your model uses an Apache 2.0 license, your Autodistill extension must use the same license). Your license should be in a file called `LICENSE`, stored in the root directory of your Autodistill extension GitHub repository.
+
+Update your README to note the license applied to your package.
 
 When your Autodistill extension is ready for testing, open an Issue in the main [Autodistill](https://github.com/autodistill/autodistill) repository with a link to a public GitHub repository that contains your code.
 
